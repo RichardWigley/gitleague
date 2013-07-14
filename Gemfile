@@ -43,3 +43,16 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+ group :development, :test do
+   gem 'rspec-rails', '~> 2.13.0'
+   gem 'capybara'
+   gem 'guard'
+   gem 'guard-rspec', '~> 3.0.2'
+   gem 'guard-livereload'
+end
+
+group :test do
+  gem 'zeus'
+end
+
