@@ -8,7 +8,12 @@ module Github
     end
 
     def fetch username
-      JSON.parse get username
+      records = JSON.parse get username
+      records.each do |record|
+        checksum_from_hash = Digest::MD5.hexdigest Marshal.dump(record)
+        record['checksum'] = checksum_from_hash
+      end
+      records
     end
 
   private
