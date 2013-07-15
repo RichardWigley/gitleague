@@ -45,7 +45,7 @@ end
 # gem 'debugger', group: [:development, :test]
 
  group :development, :test do
-   gem 'rspec-rails', '~> 2.13.0'
+   gem 'rspec-rails', '~> 2.14.0'
    gem 'capybara'
    gem 'guard'
    gem 'guard-rspec', '~> 3.0.2'
