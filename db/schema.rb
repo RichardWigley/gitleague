@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20130715124924) do
   end
 
   create_table "events", force: true do |t|
-    t.string   "type"
+    t.string   "github_type"
     t.integer  "actor_id"
     t.text     "data"
     t.datetime "github_created_at", null: false

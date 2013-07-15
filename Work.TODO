@@ -4,3 +4,4 @@ gitleague
  ✔ Added the actor and event model @done (13-07-15 12:25)
  ✔ Added checksums to the events @done (13-07-15 13:46)
  ✔ Added unique checksum to the events @done (13-07-15 13:54)
+ ✔ Added method for creating event records from github data @done (13-07-15 15:47)
