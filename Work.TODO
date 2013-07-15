@@ -6,3 +6,4 @@ gitleague
  ✔ Added unique checksum to the events @done (13-07-15 13:54)
  ✔ Added method for creating event records from github data @done (13-07-15 15:47)
  ✔ Stop hitting github in our tests @done (13-07-15 17:43)
+ ✔ Importing users from github @done (13-07-15 18:44)
