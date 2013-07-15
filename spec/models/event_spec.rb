@@ -5,7 +5,6 @@ describe Event do
   let(:sample_json) { File.read 'spec/support/tenderlove.json' }
 
   it "imports" do
-    #
     Github::Client.any_instance.stub(:get).and_return(sample_json)
     records = Github::Client.fetch 'tenderlove'
 
@@ -13,6 +12,8 @@ describe Event do
       actor = Actor.find_or_create_by(name: 'tenderlove')
       Event.create_from_record actor, record
     end
+    expect(Actor.count).to eq 1
+    expect(Event.count).to eq 30
   end
 
 end

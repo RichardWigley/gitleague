@@ -3,6 +3,7 @@ require 'github/client'
 class Event < ActiveRecord::Base
   belongs_to :actor
   def self.create_from_record actor, record
+    record['checksum'].force_encoding 'UTF-8'
     create_params = {
       github_type: record['type'],
       actor: actor,
