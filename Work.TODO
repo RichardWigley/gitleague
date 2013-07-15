@@ -1,3 +1,4 @@
 gitleague
 
- ☐ Added a github client to fetch JSON
+ ✔ Added a github client to fetch JSON @done (13-07-15 12:24)
+ ✔ Added the actor and event model @done (13-07-15 12:25)
