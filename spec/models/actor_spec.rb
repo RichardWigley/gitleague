@@ -3,6 +3,11 @@ require_relative '../../lib/github/client'
 
 describe Actor do
 
+  it "scores" do
+    actor = Actor.import 'tenderlove', Github::Client
+    expect(actor.score).to eq actor.events.map(&:score).inject(:+)
+  end
+
   context "import " do
     let(:sample_json) { File.read 'spec/support/tenderlove.json' }
     before(:each) do

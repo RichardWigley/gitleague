@@ -14,5 +14,10 @@ class Actor < ActiveRecord::Base
         next
       end
     end
+    actor
+  end
+
+  def score
+    events.map(&:score).reduce(:+)
   end
 end
