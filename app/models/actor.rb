@@ -6,8 +6,8 @@ class Actor < ActiveRecord::Base
   def self.import name, klass = ::Github::Client
     records = klass.fetch name
 
+    actor = Actor.find_or_create_by(name: name)
     records.each do |record|
-      actor = Actor.find_or_create_by(name: name)
       begin
         Event.create_from_record actor, record
       rescue
