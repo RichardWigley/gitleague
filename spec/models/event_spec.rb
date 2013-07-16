@@ -16,4 +16,20 @@ describe Event do
     expect(Event.count).to eq 30
   end
 
+  it "tests score" do
+    {
+      'CommitCommentEvent' => 2,
+      'IssueCommentEvent'  => 2,
+      'IssuesEvent'        => 3,
+      'WatchEvent'         => 3,
+      'PullRequestEvent'   => 5,
+      'PushEvent'          => 7,
+      'FollowEvent'        => 1,
+      'CreateEvent'        => 3,
+    }.each do |github_type, score|
+      expect((Event.new github_type: github_type).score).to eq score
+    end
+
+  end
+
 end

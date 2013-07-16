@@ -17,6 +17,12 @@ Resources:
 - Important fields: repository.url, created_at, actor, type
 
 - Event types & points:
+
 - CommitCommentEvent 2
 - IssueCommentEvent  2
 - IssuesEvent        3
+- WatchEvent         3
+- PullRequestEvent   5
+- PushEvent          7
+- FollowEvent        1
+- CreateEvent        3
