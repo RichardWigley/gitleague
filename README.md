@@ -1,3 +1,12 @@
+GITLEAGUE
+
+
+An application that scores users on github activity.
+
+This applicaiton was made by following Tenderlove's PlayByPlay Peepcode video. I changed the tests from Unit tests to RSpec but the code should otherwise remain the same.
+He calls the application omglol which I've renamed to gitleague.
+
+
 Task:
 ==========
 
